@@ -31,7 +31,7 @@ module.exports = function (grunt){
 
 		postcss: {
 			options: {
-				map: true,
+				map: false,
 				processors: [
 					require('autoprefixer-core')({browsers: ['last 2 version']})
 				]
@@ -192,7 +192,7 @@ module.exports = function (grunt){
 			},
 			stylus: {
 				files: ['src/styles/**/*.styl'],
-				tasks: ['stylus', 'autoprefixer', 'cmq', 'csscomb']
+				tasks: ['stylus', 'postcss', 'cmq', 'csscomb']
 			},
 			jade: {
 				files: ['src/templates/**/*.jade'],
