@@ -3,7 +3,8 @@ var gulp = require('gulp'),
     stylus = require('gulp-stylus'),
     browserSync = require('browser-sync'),
     imagemin = require('gulp-imagemin'),
-    del = require('del');
+    del = require('del'),
+    runSequence = require('run-sequence');
 
 var path = {};
 path.src = "src/";
@@ -95,9 +96,10 @@ gulp.task('browsersync', function(){
 			baseDir: path.dest,
 			index: "index.html"
 		},
+		open: false,
 	})
 });
 
-gulp.task('default', function(){
-	console.log("gulp works");
+gulp.task('default', function(callback){
+	runSequence(['jade', 'stylus', 'js', 'imagemin', 'svg', 'fonts'], ['watch', 'browsersync'], callback);
 });
