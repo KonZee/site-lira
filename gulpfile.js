@@ -4,7 +4,11 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync'),
     imagemin = require('gulp-imagemin'),
     del = require('del'),
-    runSequence = require('run-sequence');
+    runSequence = require('run-sequence'),
+    postcss = require('gulp-postcss'),
+    autoprefixer = require('autoprefixer'),
+    mqpacker = require('css-mqpacker'),
+    cssnext = require('cssnext');
 
 var path = {};
 path.src = "src/";
@@ -39,8 +43,14 @@ gulp.task('jade', function(){
  */
 
 gulp.task('stylus', function(){
+	var processors = [
+		autoprefixer(),
+		mqpacker,
+		cssnext()
+	];
 	return gulp.src(path.stylus)
 	.pipe(stylus())
+	.pipe(postcss(processors))
 	.pipe(gulp.dest(path.dest + "css"))
 	.pipe(browserSync.stream());
 });
