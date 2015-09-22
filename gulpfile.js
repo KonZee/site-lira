@@ -8,7 +8,8 @@ var gulp = require('gulp'),
     postcss = require('gulp-postcss'),
     autoprefixer = require('autoprefixer'),
     mqpacker = require('css-mqpacker'),
-    cssnext = require('cssnext');
+    cssnext = require('cssnext'),
+    jshint = require('gulp-jshint');
 
 var path = {};
 path.src = "src/";
@@ -22,6 +23,11 @@ path.stylus = [
 ];
 
 path.js = path.src + "scripts/**/*.js";
+path.jshint = [
+	path.dest + "js/**/*.js",
+	"!" + path.dest + "js/libs/**/*.js",
+	"!" + path.dest + "js**/*.min.js"
+]
 
 path.images = path.src + "images/**/*.+(png|jpg|gif)";
 path.svg= path.src + "images/**/*.svg";
@@ -58,6 +64,16 @@ gulp.task('stylus', function(){
 /*
  * JS
  */
+gulp.task('js-copy', function(){
+	return gulp.src(path.js)
+	.pipe(gulp.dest(path.dest + "js"));
+});
+
+gulp.task('js', ['js-copy'], function(){
+	return gulp.src(path.jshint)
+	.pipe(jshint())
+	.pipe(jshint.reporter('default'));
+});
 
 /*
  * Other
@@ -67,10 +83,6 @@ gulp.task('clean', function(callback){
 	return cache.clearAll(callback);
 });
 
-gulp.task('js', function(){
-	return gulp.src(path.js)
-	.pipe(gulp.dest(path.dest + "js"));
-});
 
 gulp.task('imagemin', function(){
 	return gulp.src(path.images)
