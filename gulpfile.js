@@ -9,7 +9,8 @@ var gulp = require('gulp'),
     autoprefixer = require('autoprefixer'),
     mqpacker = require('css-mqpacker'),
     cssnext = require('cssnext'),
-    jshint = require('gulp-jshint');
+    jshint = require('gulp-jshint'),
+    csscomb = require('gulp-csscomb');
 
 var path = {};
 path.src = "src/";
@@ -57,6 +58,7 @@ gulp.task('stylus', function(){
 	return gulp.src(path.stylus)
 	.pipe(stylus())
 	.pipe(postcss(processors))
+	.pipe(csscomb())
 	.pipe(gulp.dest(path.dest + "css"))
 	.pipe(browserSync.stream());
 });
