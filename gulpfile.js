@@ -21,7 +21,7 @@ path.jade = path.src + "templates/*.jade";
 path.html = path.src + "html/**/*.*";
 
 path.stylus = [
-	path.src + "styles/custom/**/*.styl"
+	path.src + "styles/custom/*.styl"
 ];
 
 path.js = path.src + "scripts/**/*.js";
@@ -84,7 +84,6 @@ gulp.task('js', ['js-copy'], function(){
  */
 gulp.task('clean', function(callback){
 	del(path.dest);
-	return cache.clearAll(callback);
 });
 
 
@@ -117,13 +116,13 @@ gulp.task('fonts', function(){
  * Watching && Browser Sync
  */
 gulp.task('watch', function(){
-	gulp.watch(path.jade, ['jade']);
+//	gulp.watch(path.jade, ['jade']);
 	gulp.watch(path.html, ['copy-html']);
 	gulp.watch(path.stylus, ['stylus']);
-	gulp.watch(path.js, ['js']);
-	gulp.watch(path.images, ['imagemin']);
-	gulp.watch(path.svg, ['svg']);
-	gulp.watch(path.fonts, ['fonts']);
+//	gulp.watch(path.js, ['js']);
+//	gulp.watch(path.images, ['imagemin']);
+//	gulp.watch(path.svg, ['svg']);
+//	gulp.watch(path.fonts, ['fonts']);
 });
 
 gulp.task('browsersync', function(){
@@ -137,5 +136,5 @@ gulp.task('browsersync', function(){
 });
 
 gulp.task('default', function(callback){
-	runSequence(['jade', 'copy-html', 'stylus', 'js', 'imagemin', 'svg', 'fonts'], ['watch', 'browsersync'], callback);
+	runSequence(['copy-html', 'stylus'], ['watch', 'browsersync'], callback);
 });
