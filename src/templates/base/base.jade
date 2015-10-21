@@ -1,0 +1,39 @@
+doctype html
+html(lang='en')
+
+	include ../elements/head
+
+	body
+		header.header
+			.container
+				ul.menu
+					li.menu__item.active
+						a(href="") Главная
+					li.menu__item
+						a(href="") Блог
+					li.menu__item
+						a(href="") Вакансии
+					li.menu__item
+						a(href="") Клиенты и отзывы
+					li.menu__item
+						a(href="") Услуги и цены
+					li.menu__item
+						a(href="") Контакты
+
+		.content
+			.container
+				main.main
+					block content
+						p content
+
+				aside.sidebar
+					block sidebar
+						p sidebar
+
+		footer.footer.text-center
+			.container
+				p 2008–2015 © Лира | <a href="/feed" title="RSS Feeds" class="rss">RSS Feeds</a>
+				p При использовании материалов с сайта бюро Лира, пожалуйста, поставьте гиперссылку на первоисточник
+
+
+	include ../elements/scripts
