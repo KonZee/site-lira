@@ -1,0 +1,27 @@
+extends base/base
+
+block content
+	mixin post()
+		.post
+			a(href="")
+				h2
+					+lipsum(Math.ceil(Math.random() * 5 + 5), "words")
+			.post__data 27.09.2015
+			+lipsum(1, "paragraphs")
+			blockquote
+				+lipsum(3, "paragraphs")
+			+lipsum(2, "paragraphs")
+			p.text-center
+				a(href="") Читать полностью
+			.post__tags
+				a(href="" title="Tag name (NN topic)" rel="tag") Tag name
+				a(href="" title="Another tag (NN topic)" rel="tag") Another tag
+			hr
+
+	+post()
+	+post()
+	+post()
+	+post()
+
+block prepend sidebar
+	include elements/form

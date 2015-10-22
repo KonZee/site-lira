@@ -1,0 +1,19 @@
+extends base/base
+
+block content
+	h1 Отзывы клиентов
+	mixin reference()
+		.reference
+			img.reference__image(src="http://liraltd.com/wp/wp-content/uploads/2012/12/A-tak.gif")
+			h3 Нестор Петрович (Петропавловск)
+			p
+				+lipsum(7, "words")
+			a(href="") http://client.site
+			blockquote
+				+lipsum(3, "paragraphs")
+
+	+reference()
+	+reference()
+	+reference()
+
+	hr

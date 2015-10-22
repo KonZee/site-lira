@@ -1,0 +1,76 @@
+html {
+	font-size: 13px;
+	font-family: Arial, Helvetica, Garuda, sans-serif;
+}
+body {
+	color: #333333;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-weight: normal;
+	margin: 0.75em 0 0.25em;
+	padding: 0;
+}
+h1 {
+	font-size: 250%;
+	letter-spacing: -0.04em;
+}
+h1.title {
+	font: 350%/100% times, Times New Roman, times-roman, georgia, serif;
+	letter-spacing: -1px;
+	text-shadow: 1px 1px 1px #FFFFFF;
+	margin: 0.25em 0 0.5em;
+}
+h2 {
+	font-size: 200%;
+	letter-spacing: -0.03em;
+}
+h3 {
+	font-size: 160%;
+	letter-spacing: -0.02em;
+}
+a {
+	color: #356AA0;
+	text-decoration: none;
+}
+a:hover,
+a:focus {
+	color: #ED1E24;
+	text-decoration: underline;
+}
+p {
+	line-height: 150%;
+	margin: 0.25em 0 0.75em;
+}
+ul {
+	padding: 0;
+	line-height: 150%;
+	list-style-position: outside;
+	list-style-type: disc;
+	margin: 0 0 10px 15px;
+}
+blockquote {
+	background: #F9F9F9;
+	border-left: 10px solid #CCCCCC;
+	padding: 0.5em 10px;
+	margin: 1.5em 10px;
+	quotes: '“' '”' '‘' '’';
+	position: relative;
+}
+blockquote:before {
+	content: open-quote;
+	font-size: 4em;
+	line-height: 0.1em;
+	margin-right: 0.25em;
+	vertical-align: -0.4em;
+	color: #CCCCCC;
+}
+blockquote p {
+	display: inline;
+}
+.text-center {
+	text-align: center;
+}

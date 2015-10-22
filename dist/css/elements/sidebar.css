@@ -1,0 +1,30 @@
+.sidebar {
+	min-height: 1px;
+	width: 100%;
+	padding: 13px 10px 0;
+}
+.sidebar__info {
+	font-size: 150%;
+	color: #333333;
+	border-bottom: 1px solid #999999;
+	letter-spacing: normal;
+	margin-bottom: 4px;
+	padding: 5px 0 2px;
+}
+.sidebar__link {
+	line-height: 150%;
+}
+@media screen and (min-width: 100px) {
+	.sidebar {
+		width: 320px;
+		float: right;
+	}
+	.sidebar:before,
+	.sidebar:after {
+		content: '';
+		display: table;
+	}
+	.sidebar:after {
+		clear: both;
+	}
+}

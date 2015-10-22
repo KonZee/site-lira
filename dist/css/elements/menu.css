@@ -1,0 +1,24 @@
+.menu {
+	width: 100%;
+	display: block;
+	margin: 3em 5px 0;
+}
+.menu__item {
+	display: inline-block;
+	line-height: normal;
+}
+.menu__item a {
+	display: block;
+	padding: 10px 15px;
+	background: #CCCCCC;
+	font-size: 115%;
+	color: #666666;
+	text-shadow: 0 1px 1px #FFFFFF;
+	text-decoration: none;
+}
+.menu__item.active a,
+.menu__item:hover a {
+	background: #FFFFFF;
+	color: #999999;
+	text-shadow: none;
+}
