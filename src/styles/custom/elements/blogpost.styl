@@ -1,0 +1,46 @@
+.blogpost
+	position relative
+
+	&__authorimage
+		width 85px
+		height 85px
+		border-radius 50%
+		position absolute
+		top 12px
+
+	&__print
+		position absolute
+		top 12px
+		right 0
+		z-index 10
+		display block
+		border 1px solid #ccc
+		border-radius 5px
+		font-size 120%
+		background #fff
+		color #999
+		margin-left 4px
+		padding 2px 5px
+		text-decoration none
+		display none
+		&:hover
+			background #ed1e24
+			border-color #ed1e24
+			color #fff
+			text-decoration inherit
+	&:hover
+		.blogpost__print
+			display block
+
+	h1
+	&__author
+		margin-left 100px
+
+
+	&__author
+		border-bottom 1px dotted #aaa
+		padding-bottom 5px
+
+	&__gap
+		height 2em
+		width 100%

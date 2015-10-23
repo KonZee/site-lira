@@ -2,7 +2,7 @@
 	min-height 1px
 	width 100%
 	padding 13px 10px 0
-	@media screen and (min-width: 100px)
+	@media screen and (min-width: 1000px)
 		width 320px
 		float right
 		&:before
@@ -12,12 +12,22 @@
 		&:after
 			clear both
 
-	&__info
-		font-size 150%
-		color #333
-		border-bottom 1px solid #999
-		letter-spacing normal
-		margin-bottom 4px
-		padding 5px 0 2px
+	&__tags
+		margin-bottom 2em
+		li
+			list-style none
+	&__latest
+		margin-bottom 2em
+		li
+			list-style none
+			padding 5px 0
+			&:not(:first-child)
+				border-top 1px dotted #aaa
 	&__link
 		line-height 150%
+		margin-bottom 2em
+		display block
+	&__imagebutton
+		img
+			width 200px
+			display block

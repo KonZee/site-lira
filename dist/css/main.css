@@ -210,6 +210,15 @@ h3 {
 	font-size: 160%;
 	letter-spacing: -0.02em;
 }
+h3.title {
+	color: #333333;
+	font-size: 150%;
+	font-family: Calibri, 'Myriad Pro', Myriad, 'Trebuchet MS', Helvetica, Arial, sans-serif;
+	border-bottom: 1px solid #999999;
+	padding: 5px 0 2px;
+	letter-spacing: normal;
+	margin-bottom: 4px;
+}
 a {
 	color: #356AA0;
 	text-decoration: none;
@@ -347,16 +356,30 @@ hr {
 	width: 100%;
 	padding: 13px 10px 0;
 }
-.sidebar__info {
-	font-size: 150%;
-	color: #333333;
-	border-bottom: 1px solid #999999;
-	letter-spacing: normal;
-	margin-bottom: 4px;
-	padding: 5px 0 2px;
+.sidebar__tags {
+	margin-bottom: 2em;
+}
+.sidebar__tags li {
+	list-style: none;
+}
+.sidebar__latest {
+	margin-bottom: 2em;
+}
+.sidebar__latest li {
+	list-style: none;
+	padding: 5px 0;
+}
+.sidebar__latest li:not(:first-child) {
+	border-top: 1px dotted #AAAAAA;
 }
 .sidebar__link {
 	line-height: 150%;
+	margin-bottom: 2em;
+	display: block;
+}
+.sidebar__imagebutton img {
+	width: 200px;
+	display: block;
 }
 .form {
 	display: block;
@@ -449,6 +472,53 @@ hr {
 	padding: 5px;
 	background: #EFEFEF;
 }
+.blogpost {
+	position: relative;
+}
+.blogpost__authorimage {
+	width: 85px;
+	height: 85px;
+	border-radius: 50%;
+	position: absolute;
+	top: 12px;
+}
+.blogpost__print {
+	position: absolute;
+	top: 12px;
+	right: 0;
+	z-index: 10;
+	display: block;
+	border: 1px solid #CCCCCC;
+	border-radius: 5px;
+	font-size: 120%;
+	background: #FFFFFF;
+	color: #999999;
+	margin-left: 4px;
+	padding: 2px 5px;
+	text-decoration: none;
+	display: none;
+}
+.blogpost__print:hover {
+	background: #ED1E24;
+	border-color: #ED1E24;
+	color: #FFFFFF;
+	text-decoration: inherit;
+}
+.blogpost:hover .blogpost__print {
+	display: block;
+}
+.blogpost h1,
+.blogpost__author {
+	margin-left: 100px;
+}
+.blogpost__author {
+	border-bottom: 1px dotted #AAAAAA;
+	padding-bottom: 5px;
+}
+.blogpost__gap {
+	height: 2em;
+	width: 100%;
+}
 .footer {
 	background: #111111;
 	color: #555555;
@@ -466,8 +536,6 @@ hr {
 		width: 640px;
 		float: left;
 	}
-}
-@media screen and (min-width: 100px) {
 	.sidebar {
 		width: 320px;
 		float: right;
@@ -479,5 +547,10 @@ hr {
 	}
 	.sidebar:after {
 		clear: both;
+	}
+}
+@media screen and (max-width: 999px) {
+	.form label:after {
+		bottom: 22px;
 	}
 }

@@ -1,0 +1,48 @@
+extends base/base
+
+block content
+	.blogpost
+
+		a(href="").blogpost__print Print
+
+		img(src="http://dummyimage.com/85x85/707070/fff").blogpost__authorimage
+		h1.title Регламенты бюро «Лира»: Требования к составлению рекламных объявлений
+		p.blogpost__author Иоанн Васильевич Грозный, Царь всея Руси
+		.blogpost__gap
+
+		+lipsum(4, "paragraphs")
+
+
+block prepend sidebar
+	include elements/form
+
+	.sidebar__tags
+		h3.title Статьи по темам
+		ul
+			li
+				a(href="") Tag
+				|  (99)
+			li
+				a(href="") Another tag
+				|  (1)
+
+	.sidebar__latest
+		h3.title Последние записи
+		ul
+			li
+				a(href="")
+					+lipsum(10, "words")
+					|  (5)
+			li
+				a(href="")
+					+lipsum(10, "words")
+					|  (5)
+			li
+				a(href="")
+					+lipsum(10, "words")
+					|  (5)
+
+block append sidebar
+	.sidebar__imagebutton
+		a(href="")
+			img(src="http://liraltd.com/wp/wp-content/uploads/2014/07/AskQuestion2Burey.png")
