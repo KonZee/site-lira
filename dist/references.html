@@ -4,9 +4,603 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
     <title>Lira LTD</title>
-    <!--link(href='css/bootstrap.css?' + timestamp rel='stylesheet')-->
-    <link href="css/main.css?undefined" rel="stylesheet">
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <style type="text/css">html,
+body {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display:         flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	min-height: 100%;
+}
+body {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1 1 auto;
+	    -ms-flex: 1 1 auto;
+	        flex: 1 1 auto;
+	position: relative;
+}
+.header,
+.footer {
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+}
+.content {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1 0 auto;
+	    -ms-flex: 1 0 auto;
+	        flex: 1 0 auto;
+}
+.container {
+	display: table;
+	width: 100%;
+	max-width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.main {
+	min-height: 1px;
+	width: 100%;
+	padding: 10px 10px 0;
+}
+.sidebar {
+	min-height: 1px;
+	width: 100%;
+	padding: 13px 10px 0;
+}
+html {
+	font-size: 13px;
+	font-family: Arial, Helvetica, Garuda, sans-serif;
+}
+body {
+	color: #333333;
+}
+@media screen and (min-width: 1000px) {
+	.main {
+		width: 640px;
+		float: left;
+	}
+	.sidebar {
+		width: 320px;
+		float: right;
+	}
+	.sidebar:before,
+	.sidebar:after {
+		content: '';
+		display: table;
+	}
+	.sidebar:after {
+		clear: both;
+	}
+}/* normalize.css v3.0.2 | MIT License | git.io/normalize */
+html {
+	font-family: sans-serif;
+	    -ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+body {
+	margin: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+	display: block;
+}
+audio,
+canvas,
+progress,
+video {
+	display: inline-block;
+	vertical-align: baseline;
+}
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+[hidden],
+template {
+	display: none;
+}
+a {
+	background-color: transparent;
+}
+a:active,
+a:hover {
+	outline: 0;
+}
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+b,
+strong {
+	font-weight: bold;
+}
+dfn {
+	font-style: italic;
+}
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+mark {
+	background: #FFFF00;
+	color: #000000;
+}
+small {
+	font-size: 80%;
+}
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	top: -0.5em;
+}
+sub {
+	bottom: -0.25em;
+}
+img {
+	border: 0;
+}
+svg:not(:root) {
+	overflow: hidden;
+}
+figure {
+	margin: 1em 40px;
+}
+hr {
+	box-sizing: content-box;
+	height: 0;
+}
+pre {
+	overflow: auto;
+}
+code,
+kbd,
+pre,
+samp {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+	color: inherit;
+	font: inherit;
+	margin: 0;
+}
+button {
+	overflow: visible;
+}
+button,
+select {
+	text-transform: none;
+}
+button,
+html input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+	-webkit-appearance: button;
+	cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+	cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+input {
+	line-height: normal;
+}
+input[type='checkbox'],
+input[type='radio'] {
+	box-sizing: border-box;
+	padding: 0;
+}
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+	height: auto;
+}
+input[type='search'] {
+	-webkit-appearance: textfield;
+	box-sizing: content-box;
+}
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+fieldset {
+	border: 1px solid #C0C0C0;
+	margin: 0 2px;
+	padding: 0.35em 0.625em 0.75em;
+}
+legend {
+	border: 0;
+	padding: 0;
+}
+textarea {
+	overflow: auto;
+}
+optgroup {
+	font-weight: bold;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+td,
+th {
+	padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-weight: normal;
+	margin: 0.75em 0 0.25em;
+	padding: 0;
+}
+h1 {
+	font-size: 250%;
+	letter-spacing: -0.04em;
+}
+h1.title {
+	font: 350%/100% times, Times New Roman, times-roman, georgia, serif;
+	letter-spacing: -1px;
+	text-shadow: 1px 1px 1px #FFFFFF;
+	margin: 0.25em 0 0.5em;
+}
+h2 {
+	font-size: 200%;
+	letter-spacing: -0.03em;
+}
+h3 {
+	font-size: 160%;
+	letter-spacing: -0.02em;
+}
+h3.title {
+	color: #333333;
+	font-size: 150%;
+	font-family: Calibri, 'Myriad Pro', Myriad, 'Trebuchet MS', Helvetica, Arial, sans-serif;
+	border-bottom: 1px solid #999999;
+	padding: 5px 0 2px;
+	letter-spacing: normal;
+	margin-bottom: 4px;
+}
+a {
+	color: #356AA0;
+	text-decoration: none;
+}
+a:hover,
+a:focus {
+	color: #ED1E24;
+	text-decoration: underline;
+}
+p {
+	line-height: 150%;
+	margin: 0.25em 0 0.75em;
+}
+ul {
+	padding: 0;
+	line-height: 150%;
+	list-style-position: outside;
+	list-style-type: disc;
+	margin: 0 0 10px 15px;
+}
+blockquote {
+	background: #F9F9F9;
+	border-left: 10px solid #CCCCCC;
+	padding: 0.5em 10px;
+	margin: 1.5em 10px;
+	quotes: '“' '”' '‘' '’';
+	position: relative;
+}
+blockquote:before {
+	content: open-quote;
+	font-size: 4em;
+	line-height: 0.1em;
+	margin-right: 0.25em;
+	vertical-align: -0.4em;
+	color: #CCCCCC;
+}
+blockquote p {
+	display: inline;
+}
+.text-center {
+	text-align: center;
+}
+* {
+	box-sizing: border-box;
+}
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+input,
+select,
+textarea {
+	margin-bottom: 5px;
+	font-family: 'Lucida Grande', 'Lucida Sans Unicode', verdana, arial, Tahoma, Verdana, sans-serif;
+}
+hr {
+	margin: 20px 0 2em;
+	border-top: 1px dotted #E8E8E8;
+	color: transparent;
+}
+.header {
+	background: #EEEEEE;
+}
+.menu {
+	display: block;
+	width: 100%;
+	margin: 0;
+	paddign: 0;
+}
+.menu__item {
+	display: block;
+}
+.menu__item a {
+	display: block;
+	padding: 10px 15px;
+	background: #CCCCCC;
+	font-size: 115%;
+	color: #666666;
+	text-shadow: 0 1px 1px #FFFFFF;
+	text-decoration: none;
+}
+.menu__item.active a,
+.menu__item:hover a {
+	background: #FFFFFF;
+	color: #999999;
+	text-shadow: none;
+}
+.sidebar__tags {
+	margin-bottom: 2em;
+}
+.sidebar__tags li {
+	list-style: none;
+}
+.sidebar__latest {
+	margin-bottom: 2em;
+}
+.sidebar__latest li {
+	list-style: none;
+	padding: 5px 0;
+}
+.sidebar__latest li:not(:first-child) {
+	border-top: 1px dotted #AAAAAA;
+}
+.sidebar__link {
+	line-height: 150%;
+	margin-bottom: 2em;
+	display: block;
+}
+.sidebar__imagebutton img {
+	width: 200px;
+	display: block;
+}
+.form {
+	display: block;
+	padding: 10px 0;
+	margin: 10px 0 4em;
+	font-size: 14px;
+	font-family: Helvetica, Arial, sans-serif;
+}
+.form__requred {
+	font-size: 11px;
+	text-align: right;
+}
+.form__requred span {
+	color: #CC6600;
+	font-size: 200%;
+}
+.form label {
+	display: block;
+	padding-bottom: 3%;
+	margin-top: 5px;
+	position: relative;
+}
+.form label:after {
+	display: block;
+	content: '*';
+	color: #CC6600;
+	font-size: 200%;
+	position: absolute;
+	right: 12px;
+	bottom: 8px;
+}
+.form input[type='text'] {
+	width: 100%;
+	padding: 8px 30px 8px 2%;
+	border: 1px solid #999999;
+	font-size: 1em;
+	margin-top: 3px;
+	line-height: 18px;
+}
+.form__subscribe {
+	background: #AAAAAA;
+	color: #FFFFFF;
+	border: none;
+	border-radius: 4px;
+	margin-bottom: 5px;
+	padding: 0 22px;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 32px;
+	height: 32px;
+}
+.post a h2 {
+	color: #4E4E4E;
+}
+.post a h2:hover {
+	color: #ED1E24;
+	text-decoration: none;
+}
+.post__data {
+	display: inline-block;
+	background: #EDEDED;
+	color: #AAAAAA;
+	text-shadow: 1px 0 0 #FFFFFF;
+	border-radius: 5px;
+	padding: 4px 10px;
+	margin-bottom: 5px;
+}
+.post__tags a {
+	display: inline-block;
+	padding: 1px 5px 2px;
+	margin-bottom: 2px;
+	color: #AAAAAA;
+	border: 1px solid #EEEEEE;
+	border-radius: 10px;
+	margin-right: 4px;
+}
+.post__tags a:hover {
+	background: #666666;
+	border-color: #666666;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.reference__image {
+	float: right;
+	margin: 0 0 5px 10px;
+	position: relative;
+	z-index: 1;
+}
+.services-form {
+	padding: 5px;
+	background: #EFEFEF;
+}
+.blogpost {
+	position: relative;
+}
+.blogpost__authorimage {
+	width: 85px;
+	height: 85px;
+	border-radius: 50%;
+	position: absolute;
+	top: 12px;
+}
+.blogpost__print {
+	position: absolute;
+	top: 12px;
+	right: 0;
+	z-index: 10;
+	display: block;
+	border: 1px solid #CCCCCC;
+	border-radius: 5px;
+	font-size: 120%;
+	background: #FFFFFF;
+	color: #999999;
+	margin-left: 4px;
+	padding: 2px 5px;
+	text-decoration: none;
+	display: none;
+}
+.blogpost__print:hover {
+	background: #ED1E24;
+	border-color: #ED1E24;
+	color: #FFFFFF;
+	text-decoration: inherit;
+}
+.blogpost:hover .blogpost__print {
+	display: block;
+}
+.blogpost h1,
+.blogpost__author {
+	margin-left: 100px;
+}
+.blogpost__author {
+	border-bottom: 1px dotted #AAAAAA;
+	padding-bottom: 5px;
+}
+.blogpost__gap {
+	height: 2em;
+	width: 100%;
+}
+.footer {
+	background: #111111;
+	color: #555555;
+	padding: 13px 0;
+	margin-top: 10px;
+}
+.footer a {
+	color: #777777;
+}
+.footer a:hover {
+	color: #FFFFFF;
+}
+.popup {
+	display: none;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 1000;
+}
+.popup__shade {
+	width: 100%;
+	height: 100%;
+	background: #000000;
+	background: rgba(0,0,0,0.5);
+	cursor: pointer;
+}
+.popup__content {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	    -ms-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
+}
+@media screen and (min-width: 700px) {
+	.menu {
+		margin: 3em 5px 0;
+	}
+	.menu__item {
+		display: inline-block;
+		line-height: normal;
+	}
+}
+@media screen and (max-width: 999px) {
+	.form label:after {
+		bottom: 22px;
+	}
+	.form__subscribe {
+		display: table;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 22px;
+		padding: 5px 22px;
+		height: 42px;
+	}
+}
+    </style>
   </head>
   <body>
     <header class="header">
@@ -27,40 +621,40 @@
           <h1>Отзывы клиентов</h1>
                     <div class="reference"><img src="http://liraltd.com/wp/wp-content/uploads/2012/12/A-tak.gif" class="reference__image">
                       <h3>Нестор Петрович (Петропавловск)</h3>
-                      <p>Culpa nostrud reprehenderit dolore dolore do dolor 
+                      <p>Excepteur incididunt ea aliquip tempor aliqua laboris 
                       </p><a href="">http://client.site</a>
                       <blockquote>
-                          <p>Irure laborum magna, eu do. Ex esse ea non dolore. Mollit nostrud, cupidatat anim labore, elit in voluptate reprehenderit aliquip tempor voluptate exercitation. Eiusmod, nostrud dolor, pariatur sit consequat culpa sint laborum. Dolore ut nostrud dolor fugiat. Sit, lorem consequat dolor sint dolore ad. 
+                          <p>Nisi sunt exercitation officia velit cillum laboris sed veniam excepteur sint, qui. In, veniam minim exercitation culpa dolore. Laborum proident lorem in id qui nostrud qui duis. Tempor eu, laborum sint aliquip, in sed sint ut magna pariatur fugiat? Mollit ipsum, elit, eiusmod, mollit occaecat dolore, nostrud ut? 
                           </p>
-                          <p>Ipsum, sint elit veniam amet aliquip, culpa in? Nisi aute magna, esse, est aute exercitation nostrud quis. Pariatur, consectetur anim, cillum ad laborum ex commodo ea. Do in exercitation culpa, tempor cupidatat pariatur velit ut, nisi. Consectetur veniam lorem, dolore ut qui magna? 
+                          <p>Elit ad ea esse qui occaecat ex commodo exercitation. Aliqua ex id ad qui, enim et nostrud velit proident? Ullamco dolor excepteur mollit dolore, ea quis labore dolore, voluptate. Sed, irure lorem anim fugiat in, ut, voluptate, officia eiusmod consequat. 
                           </p>
-                          <p>Aliqua reprehenderit nulla, deserunt commodo esse elit cupidatat reprehenderit. Aliquip, esse excepteur quis officia, exercitation ullamco aute ipsum et. Consequat eiusmod adipiscing id cupidatat labore in non sint do commodo dolore. Velit enim nisi, amet duis. 
+                          <p>Aute minim tempor consectetur magna, aliqua, in nulla, nisi. Cillum ipsum consectetur id nulla velit cillum magna dolore. Minim mollit in aute incididunt est? Proident in sed, officia fugiat esse ut laborum, esse ea labore nulla. Tempor, nulla culpa ut eiusmod id id occaecat ipsum exercitation incididunt veniam. Anim id velit, ipsum consequat adipiscing laborum sint labore. Aliqua aute laboris ullamco ut ut amet voluptate dolore nisi. 
                           </p>
                       </blockquote>
                     </div>
                     <div class="reference"><img src="http://liraltd.com/wp/wp-content/uploads/2012/12/A-tak.gif" class="reference__image">
                       <h3>Нестор Петрович (Петропавловск)</h3>
-                      <p>Veniam tempor amet fugiat in consequat aute 
+                      <p>Do proident minim excepteur dolore ad do 
                       </p><a href="">http://client.site</a>
                       <blockquote>
-                          <p>Excepteur eiusmod aliquip, minim, ipsum proident, adipiscing? Tempor quis veniam elit occaecat sit. Sint, magna, aliqua mollit qui, in sint consequat sunt aute non ut, excepteur dolor dolor. Cupidatat cillum pariatur proident, dolore culpa nostrud, dolore. Sint, laborum in velit laboris in. Enim nisi, deserunt in proident minim. 
+                          <p>Ut nostrud dolor in irure tempor fugiat nulla commodo exercitation. Tempor, anim anim, ea sit non officia, ut commodo. Laboris laboris ullamco lorem ut nisi cupidatat consequat fugiat voluptate commodo reprehenderit. 
                           </p>
-                          <p>Excepteur, ullamco occaecat ea. Dolor elit in nulla, quis irure sit dolore, consectetur, commodo consequat nisi. Voluptate laborum sint, ad ea, dolor cupidatat proident adipiscing. 
+                          <p>Laboris est eu duis, sit laboris irure aliquip. Adipiscing consequat, fugiat, irure veniam, laborum ut ad dolor. Do amet cillum dolore, eiusmod fugiat voluptate non pariatur, nisi, cillum irure qui nisi irure. Dolor, commodo dolor anim tempor nulla ipsum officia do. 
                           </p>
-                          <p>Dolore ex anim deserunt aliqua in id, irure commodo. Cupidatat sed dolore occaecat fugiat, deserunt, duis minim, proident reprehenderit, qui sunt magna laborum dolore non? Sint lorem mollit, amet, dolor, esse irure nulla fugiat esse minim dolor. 
+                          <p>Culpa eu anim ut mollit adipiscing dolore, duis pariatur magna ad tempor dolore eiusmod. Excepteur amet irure laborum exercitation ut reprehenderit. Nisi ut, consectetur elit veniam reprehenderit mollit, sit dolore, dolore. Nulla dolor elit deserunt sint cillum esse aute? Eiusmod tempor labore minim deserunt mollit ullamco commodo voluptate exercitation dolore laborum. 
                           </p>
                       </blockquote>
                     </div>
                     <div class="reference"><img src="http://liraltd.com/wp/wp-content/uploads/2012/12/A-tak.gif" class="reference__image">
                       <h3>Нестор Петрович (Петропавловск)</h3>
-                      <p>Laborum reprehenderit ex nisi in officia qui 
+                      <p>In quis in nulla eiusmod sit proident 
                       </p><a href="">http://client.site</a>
                       <blockquote>
-                          <p>Amet amet duis irure id sit tempor amet cillum. Lorem, aute anim sunt proident, occaecat voluptate qui esse. Id, voluptate consequat sint, ad exercitation. Ea adipiscing, ullamco, incididunt, nulla esse sint anim irure, reprehenderit. Veniam sit, cupidatat anim aliqua ut, nostrud sunt laboris reprehenderit id nostrud. Deserunt voluptate velit reprehenderit irure ad incididunt aute consequat esse, consectetur incididunt excepteur. 
+                          <p>Et excepteur consequat, proident elit eiusmod lorem pariatur dolor sed. Elit eu sit duis, enim incididunt elit pariatur duis mollit in. In, ex, non officia quis in in proident exercitation consequat, nisi? Irure laboris eu adipiscing consectetur, labore dolor. 
                           </p>
-                          <p>Tempor, aliquip laboris, lorem, nostrud ex nulla, ipsum. Id tempor exercitation magna excepteur duis, adipiscing exercitation lorem est aute. Eu reprehenderit in, adipiscing tempor, eu, irure aliqua dolore deserunt. Incididunt cupidatat labore, sint, est esse, consequat aute ex, exercitation, esse minim. 
+                          <p>Elit, minim, ipsum elit mollit veniam ad nostrud dolor commodo cillum ut ut. Aliqua quis est ullamco, mollit esse ad velit sint. Incididunt, dolor laboris, ut consequat, mollit ex nulla consectetur. Dolore ipsum consequat do do proident consectetur nostrud aliquip. Id ea dolor elit, dolore ex amet esse officia laborum voluptate? Est proident, ut ad, ad commodo velit fugiat et. 
                           </p>
-                          <p>Ullamco, sit duis ullamco aute, aliqua irure, eiusmod. Irure, pariatur dolor, velit enim et sit dolore. 
+                          <p>Ut dolore, incididunt ex, aliquip sed occaecat tempor. Irure ex nostrud fugiat laborum dolor irure lorem. 
                           </p>
                       </blockquote>
                     </div>
@@ -77,6 +671,15 @@
         <p>При использовании материалов с сайта бюро Лира, пожалуйста, поставьте гиперссылку на первоисточник</p>
       </div>
     </footer>
+    <div class="popup">
+      <div class="popup__shade"></div>
+      <div class="popup__content">
+        <div class="close"></div>
+      </div>
+    </div>
   </body>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js "> </script>
+  <!--link(href='css/main.css?' + timestamp rel='stylesheet')-->
+  <!-- Place for scripts-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js "></script>
+  <script src="js/main.js"></script>
 </html>

@@ -4,9 +4,603 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
     <title>Lira LTD</title>
-    <!--link(href='css/bootstrap.css?' + timestamp rel='stylesheet')-->
-    <link href="css/main.css?undefined" rel="stylesheet">
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <style type="text/css">html,
+body {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display:         flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	min-height: 100%;
+}
+body {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1 1 auto;
+	    -ms-flex: 1 1 auto;
+	        flex: 1 1 auto;
+	position: relative;
+}
+.header,
+.footer {
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+}
+.content {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1 0 auto;
+	    -ms-flex: 1 0 auto;
+	        flex: 1 0 auto;
+}
+.container {
+	display: table;
+	width: 100%;
+	max-width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.main {
+	min-height: 1px;
+	width: 100%;
+	padding: 10px 10px 0;
+}
+.sidebar {
+	min-height: 1px;
+	width: 100%;
+	padding: 13px 10px 0;
+}
+html {
+	font-size: 13px;
+	font-family: Arial, Helvetica, Garuda, sans-serif;
+}
+body {
+	color: #333333;
+}
+@media screen and (min-width: 1000px) {
+	.main {
+		width: 640px;
+		float: left;
+	}
+	.sidebar {
+		width: 320px;
+		float: right;
+	}
+	.sidebar:before,
+	.sidebar:after {
+		content: '';
+		display: table;
+	}
+	.sidebar:after {
+		clear: both;
+	}
+}/* normalize.css v3.0.2 | MIT License | git.io/normalize */
+html {
+	font-family: sans-serif;
+	    -ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+body {
+	margin: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+	display: block;
+}
+audio,
+canvas,
+progress,
+video {
+	display: inline-block;
+	vertical-align: baseline;
+}
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+[hidden],
+template {
+	display: none;
+}
+a {
+	background-color: transparent;
+}
+a:active,
+a:hover {
+	outline: 0;
+}
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+b,
+strong {
+	font-weight: bold;
+}
+dfn {
+	font-style: italic;
+}
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+mark {
+	background: #FFFF00;
+	color: #000000;
+}
+small {
+	font-size: 80%;
+}
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	top: -0.5em;
+}
+sub {
+	bottom: -0.25em;
+}
+img {
+	border: 0;
+}
+svg:not(:root) {
+	overflow: hidden;
+}
+figure {
+	margin: 1em 40px;
+}
+hr {
+	box-sizing: content-box;
+	height: 0;
+}
+pre {
+	overflow: auto;
+}
+code,
+kbd,
+pre,
+samp {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+	color: inherit;
+	font: inherit;
+	margin: 0;
+}
+button {
+	overflow: visible;
+}
+button,
+select {
+	text-transform: none;
+}
+button,
+html input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+	-webkit-appearance: button;
+	cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+	cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+input {
+	line-height: normal;
+}
+input[type='checkbox'],
+input[type='radio'] {
+	box-sizing: border-box;
+	padding: 0;
+}
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+	height: auto;
+}
+input[type='search'] {
+	-webkit-appearance: textfield;
+	box-sizing: content-box;
+}
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+fieldset {
+	border: 1px solid #C0C0C0;
+	margin: 0 2px;
+	padding: 0.35em 0.625em 0.75em;
+}
+legend {
+	border: 0;
+	padding: 0;
+}
+textarea {
+	overflow: auto;
+}
+optgroup {
+	font-weight: bold;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+td,
+th {
+	padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-weight: normal;
+	margin: 0.75em 0 0.25em;
+	padding: 0;
+}
+h1 {
+	font-size: 250%;
+	letter-spacing: -0.04em;
+}
+h1.title {
+	font: 350%/100% times, Times New Roman, times-roman, georgia, serif;
+	letter-spacing: -1px;
+	text-shadow: 1px 1px 1px #FFFFFF;
+	margin: 0.25em 0 0.5em;
+}
+h2 {
+	font-size: 200%;
+	letter-spacing: -0.03em;
+}
+h3 {
+	font-size: 160%;
+	letter-spacing: -0.02em;
+}
+h3.title {
+	color: #333333;
+	font-size: 150%;
+	font-family: Calibri, 'Myriad Pro', Myriad, 'Trebuchet MS', Helvetica, Arial, sans-serif;
+	border-bottom: 1px solid #999999;
+	padding: 5px 0 2px;
+	letter-spacing: normal;
+	margin-bottom: 4px;
+}
+a {
+	color: #356AA0;
+	text-decoration: none;
+}
+a:hover,
+a:focus {
+	color: #ED1E24;
+	text-decoration: underline;
+}
+p {
+	line-height: 150%;
+	margin: 0.25em 0 0.75em;
+}
+ul {
+	padding: 0;
+	line-height: 150%;
+	list-style-position: outside;
+	list-style-type: disc;
+	margin: 0 0 10px 15px;
+}
+blockquote {
+	background: #F9F9F9;
+	border-left: 10px solid #CCCCCC;
+	padding: 0.5em 10px;
+	margin: 1.5em 10px;
+	quotes: '“' '”' '‘' '’';
+	position: relative;
+}
+blockquote:before {
+	content: open-quote;
+	font-size: 4em;
+	line-height: 0.1em;
+	margin-right: 0.25em;
+	vertical-align: -0.4em;
+	color: #CCCCCC;
+}
+blockquote p {
+	display: inline;
+}
+.text-center {
+	text-align: center;
+}
+* {
+	box-sizing: border-box;
+}
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+input,
+select,
+textarea {
+	margin-bottom: 5px;
+	font-family: 'Lucida Grande', 'Lucida Sans Unicode', verdana, arial, Tahoma, Verdana, sans-serif;
+}
+hr {
+	margin: 20px 0 2em;
+	border-top: 1px dotted #E8E8E8;
+	color: transparent;
+}
+.header {
+	background: #EEEEEE;
+}
+.menu {
+	display: block;
+	width: 100%;
+	margin: 0;
+	paddign: 0;
+}
+.menu__item {
+	display: block;
+}
+.menu__item a {
+	display: block;
+	padding: 10px 15px;
+	background: #CCCCCC;
+	font-size: 115%;
+	color: #666666;
+	text-shadow: 0 1px 1px #FFFFFF;
+	text-decoration: none;
+}
+.menu__item.active a,
+.menu__item:hover a {
+	background: #FFFFFF;
+	color: #999999;
+	text-shadow: none;
+}
+.sidebar__tags {
+	margin-bottom: 2em;
+}
+.sidebar__tags li {
+	list-style: none;
+}
+.sidebar__latest {
+	margin-bottom: 2em;
+}
+.sidebar__latest li {
+	list-style: none;
+	padding: 5px 0;
+}
+.sidebar__latest li:not(:first-child) {
+	border-top: 1px dotted #AAAAAA;
+}
+.sidebar__link {
+	line-height: 150%;
+	margin-bottom: 2em;
+	display: block;
+}
+.sidebar__imagebutton img {
+	width: 200px;
+	display: block;
+}
+.form {
+	display: block;
+	padding: 10px 0;
+	margin: 10px 0 4em;
+	font-size: 14px;
+	font-family: Helvetica, Arial, sans-serif;
+}
+.form__requred {
+	font-size: 11px;
+	text-align: right;
+}
+.form__requred span {
+	color: #CC6600;
+	font-size: 200%;
+}
+.form label {
+	display: block;
+	padding-bottom: 3%;
+	margin-top: 5px;
+	position: relative;
+}
+.form label:after {
+	display: block;
+	content: '*';
+	color: #CC6600;
+	font-size: 200%;
+	position: absolute;
+	right: 12px;
+	bottom: 8px;
+}
+.form input[type='text'] {
+	width: 100%;
+	padding: 8px 30px 8px 2%;
+	border: 1px solid #999999;
+	font-size: 1em;
+	margin-top: 3px;
+	line-height: 18px;
+}
+.form__subscribe {
+	background: #AAAAAA;
+	color: #FFFFFF;
+	border: none;
+	border-radius: 4px;
+	margin-bottom: 5px;
+	padding: 0 22px;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 32px;
+	height: 32px;
+}
+.post a h2 {
+	color: #4E4E4E;
+}
+.post a h2:hover {
+	color: #ED1E24;
+	text-decoration: none;
+}
+.post__data {
+	display: inline-block;
+	background: #EDEDED;
+	color: #AAAAAA;
+	text-shadow: 1px 0 0 #FFFFFF;
+	border-radius: 5px;
+	padding: 4px 10px;
+	margin-bottom: 5px;
+}
+.post__tags a {
+	display: inline-block;
+	padding: 1px 5px 2px;
+	margin-bottom: 2px;
+	color: #AAAAAA;
+	border: 1px solid #EEEEEE;
+	border-radius: 10px;
+	margin-right: 4px;
+}
+.post__tags a:hover {
+	background: #666666;
+	border-color: #666666;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.reference__image {
+	float: right;
+	margin: 0 0 5px 10px;
+	position: relative;
+	z-index: 1;
+}
+.services-form {
+	padding: 5px;
+	background: #EFEFEF;
+}
+.blogpost {
+	position: relative;
+}
+.blogpost__authorimage {
+	width: 85px;
+	height: 85px;
+	border-radius: 50%;
+	position: absolute;
+	top: 12px;
+}
+.blogpost__print {
+	position: absolute;
+	top: 12px;
+	right: 0;
+	z-index: 10;
+	display: block;
+	border: 1px solid #CCCCCC;
+	border-radius: 5px;
+	font-size: 120%;
+	background: #FFFFFF;
+	color: #999999;
+	margin-left: 4px;
+	padding: 2px 5px;
+	text-decoration: none;
+	display: none;
+}
+.blogpost__print:hover {
+	background: #ED1E24;
+	border-color: #ED1E24;
+	color: #FFFFFF;
+	text-decoration: inherit;
+}
+.blogpost:hover .blogpost__print {
+	display: block;
+}
+.blogpost h1,
+.blogpost__author {
+	margin-left: 100px;
+}
+.blogpost__author {
+	border-bottom: 1px dotted #AAAAAA;
+	padding-bottom: 5px;
+}
+.blogpost__gap {
+	height: 2em;
+	width: 100%;
+}
+.footer {
+	background: #111111;
+	color: #555555;
+	padding: 13px 0;
+	margin-top: 10px;
+}
+.footer a {
+	color: #777777;
+}
+.footer a:hover {
+	color: #FFFFFF;
+}
+.popup {
+	display: none;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 1000;
+}
+.popup__shade {
+	width: 100%;
+	height: 100%;
+	background: #000000;
+	background: rgba(0,0,0,0.5);
+	cursor: pointer;
+}
+.popup__content {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	    -ms-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
+}
+@media screen and (min-width: 700px) {
+	.menu {
+		margin: 3em 5px 0;
+	}
+	.menu__item {
+		display: inline-block;
+		line-height: normal;
+	}
+}
+@media screen and (max-width: 999px) {
+	.form label:after {
+		bottom: 22px;
+	}
+	.form__subscribe {
+		display: table;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 22px;
+		padding: 5px 22px;
+		height: 42px;
+	}
+}
+    </style>
   </head>
   <body>
     <header class="header">
@@ -25,88 +619,88 @@
       <div class="container">
         <main class="main">
                     <div class="post"><a href="">
-                        <h2>Anim cillum ipsum id cillum eiusmod quis 
+                        <h2>Esse incididunt velit dolore nostrud laborum veniam exercitation 
                         </h2></a>
                       <div class="post__data">27.09.2015</div>
-                        <p>Ut ut ex sint deserunt commodo? Excepteur ullamco nulla, veniam, officia, laborum dolore. Elit lorem esse nostrud esse magna, dolor deserunt dolore? Tempor in, culpa labore amet magna ut in irure. Pariatur, elit lorem eu ullamco ut dolor. Anim sunt dolor ipsum voluptate eiusmod in. Id duis consequat dolore, aliquip, cillum, exercitation proident sunt aliqua aliqua incididunt. 
+                        <p>Culpa excepteur nisi est, ea nisi tempor nostrud occaecat ut. Duis adipiscing sit ut exercitation do mollit laboris sunt, proident ut consectetur aliqua, proident aute. Nostrud ut, ut amet, incididunt non, et in in, ex mollit. Excepteur lorem sunt, incididunt, qui anim fugiat id, duis, deserunt. Nisi, dolore aliqua ex sint dolore duis in ad ullamco? Velit voluptate exercitation, culpa, quis labore, do laborum do ut, fugiat. Incididunt in, dolor voluptate sed mollit irure esse cupidatat dolore voluptate. Sint, dolor elit, reprehenderit cillum voluptate, dolor elit cupidatat adipiscing excepteur. 
                         </p>
                       <blockquote>
-                          <p>Adipiscing cillum et dolore cupidatat nulla reprehenderit, culpa ut irure, cillum ex? Qui magna occaecat eiusmod lorem reprehenderit excepteur, ut ea esse. Magna proident excepteur ut. Laboris nulla in, officia eu aliquip sed? Officia pariatur, minim eu elit incididunt dolore velit mollit, anim? Eiusmod magna do consequat in ipsum excepteur consectetur cupidatat, ullamco velit. 
+                          <p>Incididunt eu, lorem sed magna proident laborum ut, laborum. Laboris consequat ut, in cillum excepteur minim enim proident dolore laboris ad id. Qui, culpa ea cupidatat eiusmod et. Enim ad cillum dolor ea nostrud magna laboris sint ut sed, enim. Anim, irure tempor ipsum dolor aliqua eu aliquip, magna fugiat. 
                           </p>
-                          <p>Cupidatat adipiscing, incididunt laboris ut nostrud sint? Ex, nisi, nisi ea elit commodo, laboris velit dolor exercitation deserunt, nulla pariatur, sint. Laborum velit ut velit ea, consequat ea aliqua, commodo anim mollit sed, excepteur ut? Aute irure dolore voluptate excepteur nisi irure reprehenderit elit. 
+                          <p>Non pariatur ut ad, anim officia, enim non, cupidatat ipsum dolore, aliquip veniam. Duis consequat tempor sunt mollit aliqua? Ad, quis pariatur reprehenderit eiusmod esse ullamco? 
                           </p>
-                          <p>Cupidatat tempor cupidatat consectetur, dolore sint eu, enim id, labore fugiat. Non duis consectetur tempor, ut duis, minim in adipiscing nulla, incididunt, aute laboris in. Sit veniam dolore quis excepteur? Tempor aliqua, deserunt magna, sint nulla sunt, consequat ad, deserunt. Incididunt elit in officia ea incididunt, ipsum, ut commodo officia. Commodo reprehenderit dolor amet commodo cillum tempor. Cillum enim velit ad dolor mollit dolore dolore ut qui mollit, proident, adipiscing labore veniam. 
+                          <p>Officia in laboris, anim voluptate eiusmod pariatur incididunt do dolor esse in, qui mollit. Officia labore occaecat quis aliquip deserunt consequat ut labore dolor? Sint nisi, officia aute, pariatur? Ex, adipiscing eiusmod cillum minim eu labore eu ex nostrud, commodo irure duis. 
                           </p>
                       </blockquote>
-                        <p>Eu enim minim non ullamco aute. Occaecat ea nulla ad ex sit, nulla dolore, sed. Elit tempor velit officia exercitation ut, incididunt ut pariatur, cupidatat. 
+                        <p>Ut et esse, ipsum in culpa ea ipsum. Sunt deserunt, adipiscing ea, reprehenderit deserunt do do dolor. Aute elit cupidatat ut laborum labore aliqua in. Est do minim consequat, esse eiusmod, est elit. Non sit veniam reprehenderit, est. Exercitation dolore labore excepteur, nisi, nulla, lorem eiusmod aliqua ad in. 
                         </p>
-                        <p>Velit et anim dolore, dolor cupidatat velit excepteur, sint. Occaecat amet, dolore consequat in non nisi incididunt enim. Labore ea nisi labore consequat ipsum in pariatur, dolor, do. 
+                        <p>Veniam aliquip consequat lorem, in minim qui, est ut. Id veniam dolore culpa, eu minim cupidatat labore labore, pariatur reprehenderit. Enim, ut, aliquip ad, lorem non. Excepteur in, incididunt laboris eiusmod, adipiscing tempor in. Do id voluptate quis officia reprehenderit veniam. 
                         </p>
                       <p class="text-center"><a href="">Читать полностью</a></p>
                       <div class="post__tags"><a href="" title="Tag name (NN topic)" rel="tag">Tag name</a><a href="" title="Another tag (NN topic)" rel="tag">Another tag</a></div>
                       <hr>
                     </div>
                     <div class="post"><a href="">
-                        <h2>Sunt culpa sit ex irure dolor non dolor do 
+                        <h2>Dolore occaecat ea eu non ut commodo consequat magna elit 
                         </h2></a>
                       <div class="post__data">27.09.2015</div>
-                        <p>Dolore commodo sit ex consectetur aute. Eu cillum laborum dolore deserunt ex velit, ipsum lorem. Nisi labore qui incididunt sunt laborum lorem nostrud. Culpa est excepteur minim, do id, anim. Consequat ipsum, ut, non. 
+                        <p>Pariatur officia elit elit, fugiat elit, irure laboris duis. Nulla proident cillum ut, in incididunt duis dolor mollit labore deserunt voluptate duis. Ullamco, ut dolor culpa cillum sit sunt. Cupidatat, nulla, occaecat voluptate aliquip commodo, cupidatat veniam exercitation aliqua. Ut ex pariatur non, occaecat in in quis deserunt proident sed ut fugiat esse. Dolor cupidatat pariatur anim reprehenderit ipsum. Sunt quis eu, aute dolore ut aliquip aliquip, eiusmod fugiat pariatur amet ea est. Culpa minim anim minim veniam id magna commodo ut dolor, aliqua sunt, ut nostrud, proident nulla. 
                         </p>
                       <blockquote>
-                          <p>Eiusmod fugiat proident in aliqua dolor id, ut voluptate ut deserunt. Proident, eiusmod amet aliqua nostrud dolor do id, ullamco exercitation non, ullamco ullamco quis amet. In sunt sed cupidatat id velit, adipiscing adipiscing laboris laborum lorem lorem. Occaecat excepteur, proident, nisi occaecat qui officia eu nostrud, esse sint? Tempor dolor sunt cillum, sint consectetur non. Sed tempor enim ullamco proident adipiscing occaecat nostrud ut non ullamco incididunt et, nostrud. Cillum excepteur aliquip, cupidatat minim ullamco reprehenderit aliquip. Sunt, sint ad, qui elit in sunt. 
+                          <p>Cillum, in eiusmod ea ad reprehenderit ut tempor pariatur, exercitation ipsum. Occaecat labore id, voluptate irure, exercitation aute ipsum ex. Adipiscing dolor, aute cillum reprehenderit. Eiusmod tempor sit nostrud lorem et lorem, sit mollit aliqua officia nisi, eu. 
                           </p>
-                          <p>Labore veniam dolore irure irure aliqua. Deserunt, ipsum aute mollit, officia laborum irure culpa, officia duis. Proident ullamco amet, do aute est, do proident incididunt, fugiat laboris voluptate. Labore fugiat sed anim eiusmod id dolore consectetur labore dolor. Reprehenderit culpa minim ea pariatur cupidatat excepteur. Dolor enim incididunt amet lorem occaecat dolore ut tempor culpa, aute. Exercitation irure, tempor est fugiat est sit, tempor? 
+                          <p>Aute non aliqua et magna ut nulla in. Esse, aute officia duis excepteur ad est, fugiat id. Sit est consequat consequat, ullamco officia, aliqua in esse veniam sunt. Commodo id reprehenderit quis culpa quis, officia id aute nulla, fugiat? Sunt, commodo aute tempor sunt aute sed tempor, cupidatat, est. Fugiat, ut veniam dolore dolore enim nisi excepteur id magna. Deserunt ex aliquip, anim eiusmod adipiscing, et voluptate amet nisi, irure. 
                           </p>
-                          <p>Aliquip nisi, nostrud ut dolor do dolore ad consequat sunt ullamco, mollit laborum qui? Ut, fugiat sed sint excepteur sed non? Deserunt, id aute in enim do. Magna, ut nisi nulla, sed anim? Cupidatat ad ea enim dolore laborum irure consectetur esse? 
+                          <p>Aliqua cupidatat, officia ut, in? Nostrud in, do, irure aliquip adipiscing aliquip nisi, cillum. Ad in consectetur voluptate laboris. Sit in, in amet amet lorem in anim aliqua sit mollit. Ipsum cupidatat dolore, adipiscing fugiat velit ad reprehenderit. Lorem elit excepteur, enim dolore nisi aliquip enim reprehenderit sunt, sed do, enim esse. 
                           </p>
                       </blockquote>
-                        <p>Nisi est in incididunt labore, ad dolore? Exercitation officia quis dolore nulla sed commodo ex ut sit esse. Labore eu laboris voluptate. Dolor veniam do, velit, velit sunt velit sit. Ad ea, ea amet eu fugiat veniam reprehenderit, ex amet. Occaecat, veniam duis commodo officia dolor qui, in culpa. 
+                        <p>Proident sed cupidatat sunt exercitation, dolore ut, consequat ex dolore ad aliqua, ut. Officia ut aute culpa minim sint, consequat. 
                         </p>
-                        <p>Occaecat occaecat, in, in minim aliqua in proident, in sed. Consequat duis occaecat, sed ea ullamco excepteur ut excepteur sunt? Pariatur mollit, elit cillum, veniam, proident nulla, ut veniam, in, id. Aute nostrud dolore proident commodo. 
+                        <p>Occaecat, esse lorem occaecat quis, elit sed. Excepteur commodo elit sint ut, minim sed, reprehenderit quis? Veniam cillum adipiscing ut anim consectetur. Qui sit in, reprehenderit ipsum amet in mollit, ex, commodo. Deserunt incididunt, culpa officia adipiscing qui. 
                         </p>
                       <p class="text-center"><a href="">Читать полностью</a></p>
                       <div class="post__tags"><a href="" title="Tag name (NN topic)" rel="tag">Tag name</a><a href="" title="Another tag (NN topic)" rel="tag">Another tag</a></div>
                       <hr>
                     </div>
                     <div class="post"><a href="">
-                        <h2>Tempor lorem deserunt consequat sunt incididunt sint ad ut consequat 
+                        <h2>Nulla non amet nostrud aute in 
                         </h2></a>
                       <div class="post__data">27.09.2015</div>
-                        <p>Enim ullamco mollit do sint elit aliqua amet, fugiat ullamco, elit sint. Velit ut fugiat, elit, occaecat dolor culpa dolore, esse incididunt dolor. Incididunt aute, aliquip, ullamco sint eiusmod, aliqua lorem. 
+                        <p>Dolore id dolor laborum et, consectetur officia id. Minim amet aliquip nisi duis esse eiusmod lorem elit ut ipsum. Proident culpa consectetur anim ut cupidatat esse esse, proident. Ad, et ex in aliqua duis irure laboris. 
                         </p>
                       <blockquote>
-                          <p>Dolor adipiscing proident commodo sunt labore lorem in. Et minim, dolor aliquip, dolor ullamco laboris dolore quis ut, ex. Ad pariatur, sint reprehenderit velit ex aliqua. Eu sunt, non aliquip aliqua labore deserunt nisi, voluptate sunt. 
+                          <p>Pariatur voluptate, magna, sunt velit fugiat amet nostrud, nulla ipsum nostrud ad. Dolore, labore dolore sed, sunt, ipsum sit laboris, consequat veniam cupidatat eu ipsum? Ipsum, nisi enim ut dolore aliqua, in pariatur. Ad officia elit anim esse, aliqua, nostrud. Dolore irure duis sed? Est fugiat velit, pariatur id nulla esse nisi id aute? Mollit, sint adipiscing, in, ut ut deserunt exercitation, quis sed do. Dolor, incididunt culpa, ut dolore est ut laborum quis. 
                           </p>
-                          <p>Fugiat reprehenderit adipiscing est dolor aliquip, ut. Qui sunt sint ea dolore aliquip? In deserunt ea anim, quis. Tempor, ut, esse qui dolor, voluptate sed quis elit officia officia. Incididunt, cupidatat non dolor qui ullamco dolor do esse. Magna, magna lorem elit nostrud magna ipsum in et? 
+                          <p>Occaecat nulla, enim ex, esse irure do officia minim esse. Veniam, irure proident in, anim dolore esse sed, duis est. Voluptate, et, eu duis aliquip ipsum in laboris culpa. Proident, duis esse nisi mollit in tempor dolore id dolor. Commodo incididunt sit ex, cupidatat dolor. 
                           </p>
-                          <p>In enim consectetur, nulla, in sit elit, eu. Pariatur adipiscing labore fugiat dolore ut, eiusmod nulla mollit. Dolore, dolor, consectetur velit in dolore id elit, sit cillum deserunt. Dolor ut qui reprehenderit incididunt nulla, cupidatat, non proident. Sunt proident irure enim amet sunt et, non voluptate est exercitation, veniam exercitation, non. Voluptate in veniam ex, sed irure tempor. 
+                          <p>Eu consequat enim, laborum, duis ipsum, dolor ea est esse, nulla pariatur, do adipiscing. Voluptate ut deserunt incididunt labore reprehenderit voluptate eiusmod sint sit? Consequat, aliqua cillum aliquip, enim velit occaecat irure in ut dolor dolore, culpa culpa. Ullamco non, dolore, aliquip veniam, labore adipiscing dolor. Amet laboris, elit non irure minim lorem sint culpa lorem. Aute ex sit sit dolor tempor est minim. Eiusmod do voluptate nostrud, nostrud irure commodo amet, ullamco. Qui elit sint do magna commodo. 
                           </p>
                       </blockquote>
-                        <p>Anim, ut sed commodo minim sunt qui in dolor eu, quis. Duis consequat, tempor in aliquip consequat reprehenderit dolore, dolore. Mollit, irure, do nulla, anim. Voluptate lorem cillum, nisi anim officia non ea commodo ea non esse minim? Commodo aliquip sed, cupidatat est proident mollit, nisi cupidatat. Aliquip lorem eiusmod, ex sint reprehenderit commodo, incididunt cillum sit, labore. Sunt, nisi, dolore, do tempor aliqua veniam, fugiat duis. Aliquip labore do consectetur, officia aliquip elit, incididunt. 
+                        <p>Adipiscing ad laboris, ut nisi cupidatat, officia anim consectetur esse, officia ut. Duis in ut et, aliqua, quis esse elit, ipsum consectetur, occaecat nisi. Anim adipiscing exercitation id ullamco officia, deserunt dolore consequat, elit. 
                         </p>
-                        <p>Magna eiusmod, in nostrud dolore esse? Ea occaecat, cupidatat ipsum ullamco sit, id adipiscing occaecat consectetur, pariatur cupidatat nulla. Minim aute adipiscing mollit nostrud et, culpa. Veniam id officia dolore, excepteur sit, nisi consequat esse nulla. Do labore ad, commodo nisi est officia incididunt occaecat, qui reprehenderit. Do culpa sunt sunt, sunt officia ut consequat et sit, officia ut reprehenderit do. Incididunt velit nulla, irure dolor ipsum, ullamco incididunt dolore consectetur sit, eu? 
+                        <p>Quis dolor ex laborum nisi velit aliqua in sint ad in. Ut fugiat ea qui cillum in esse. Irure pariatur sunt culpa, magna esse tempor ea. Dolor anim, reprehenderit veniam et, dolor consectetur dolor. Occaecat, labore esse do, aute ut nulla. Tempor, proident cillum ut consequat et, ut dolor. Irure deserunt tempor in in dolore laborum irure sint, quis irure. 
                         </p>
                       <p class="text-center"><a href="">Читать полностью</a></p>
                       <div class="post__tags"><a href="" title="Tag name (NN topic)" rel="tag">Tag name</a><a href="" title="Another tag (NN topic)" rel="tag">Another tag</a></div>
                       <hr>
                     </div>
                     <div class="post"><a href="">
-                        <h2>Qui aliqua culpa aute laboris quis ut laboris proident 
+                        <h2>Veniam proident sed nisi labore lorem eu sit lorem 
                         </h2></a>
                       <div class="post__data">27.09.2015</div>
-                        <p>Dolor in sit, eiusmod in dolor ad ut. Veniam ex elit lorem consectetur, nulla, aliquip et tempor, quis lorem. Consequat, veniam duis, magna sit, laboris eiusmod, officia consectetur. Labore in fugiat proident nulla excepteur sed, duis. Cupidatat, veniam incididunt reprehenderit, dolor duis ipsum in incididunt. Ea ad enim elit occaecat ut ex, elit ut pariatur esse eiusmod, dolore pariatur. Deserunt quis elit qui, ut labore, incididunt ullamco ea, culpa, dolor sit. 
+                        <p>Deserunt nulla ut, magna, mollit dolor non aute. Cupidatat commodo esse, elit dolor tempor in id, tempor, et, amet proident officia adipiscing non duis. Ad est et, eiusmod incididunt, enim sed. Dolore incididunt, id est, anim proident dolore consectetur, in. Duis, pariatur, esse ut elit eiusmod, culpa fugiat laboris dolor? 
                         </p>
                       <blockquote>
-                          <p>Irure in adipiscing officia laboris, minim fugiat ex ut nostrud? Elit occaecat amet, consectetur reprehenderit proident ex ut velit. Cupidatat do, cupidatat occaecat adipiscing velit excepteur duis in dolor incididunt, dolor cillum. Aliqua ea sed ipsum officia sint commodo consectetur id mollit tempor consectetur quis id. Reprehenderit, nostrud pariatur anim ut nulla ut quis, quis in. 
+                          <p>Velit consequat ex, anim veniam. Deserunt elit, laborum consequat dolor, culpa, commodo qui est pariatur adipiscing est? Incididunt ad sed eiusmod ad nostrud, in cillum lorem ipsum in. Qui, id velit reprehenderit veniam exercitation, laborum laborum. 
                           </p>
-                          <p>Voluptate duis ut do enim veniam labore sint? Aute ex, reprehenderit officia deserunt, esse aliqua? Ut veniam, ad, laborum et? Cupidatat, ullamco incididunt occaecat dolore occaecat dolor ad eu irure ea. Excepteur deserunt, excepteur eu, aute tempor in, eiusmod ea exercitation aliquip? Ut nulla do, occaecat, enim, ut, consequat adipiscing. 
+                          <p>Deserunt nostrud anim veniam, reprehenderit in laboris et. Non qui aliqua sed ipsum voluptate enim ipsum sunt? Occaecat, ex sit voluptate pariatur et dolore, dolore, ad, minim. Amet elit, non do id occaecat minim, consectetur ipsum? 
                           </p>
-                          <p>Do, aliquip ea elit est laboris, cillum, voluptate adipiscing amet in, aute duis laboris. Laboris cillum excepteur sunt velit, cillum ut sunt. Dolore, est ut ipsum incididunt qui excepteur? Sint minim nulla dolor do ipsum cillum ad nulla excepteur adipiscing exercitation. Ut adipiscing amet excepteur sit sit ea, eu mollit dolor veniam. Exercitation labore ullamco est consectetur minim, quis incididunt voluptate amet. Aliquip eu voluptate qui pariatur non in, ipsum nostrud tempor lorem, qui anim, sed. Tempor incididunt dolore amet sunt id eu exercitation, do ullamco, cillum. 
+                          <p>Fugiat, officia sint, ad qui anim proident minim duis. Sit exercitation reprehenderit, labore in ut. Qui sed ullamco exercitation tempor ut ex consectetur proident. Elit, non reprehenderit ipsum anim voluptate, ut fugiat, dolor, in fugiat. 
                           </p>
                       </blockquote>
-                        <p>Aliqua est eu, irure in, elit esse irure. Quis excepteur esse mollit lorem deserunt esse laborum, deserunt qui mollit, lorem. Reprehenderit amet duis labore laborum, sit non, dolor sunt incididunt. Consequat enim laborum laborum sint. Dolore, tempor proident aliquip in dolore qui velit id, adipiscing deserunt do. Non, dolor, sed nisi, sit dolore ad cupidatat ut? 
+                        <p>Dolor magna, laboris in, dolore sunt aliquip, ullamco nisi cupidatat dolore. Ad cillum commodo, mollit proident, cupidatat commodo aliqua cupidatat ipsum. 
                         </p>
-                        <p>Nulla do amet consequat reprehenderit velit duis amet, amet. Labore, dolore minim proident adipiscing cupidatat reprehenderit, qui occaecat, ullamco velit non. Cillum lorem amet, fugiat veniam in ullamco ut, deserunt ipsum in eiusmod. Elit deserunt ea ex aute, sint dolore pariatur sed tempor. Sint et dolore lorem quis in, in dolor enim veniam elit, dolor irure cillum. 
+                        <p>In consequat qui dolor nulla dolor, magna mollit et reprehenderit pariatur voluptate. Consequat cupidatat laborum commodo culpa ea excepteur. Esse nostrud id, ea, fugiat, sint in labore, sit deserunt, ullamco ipsum quis. Ea, proident dolore elit exercitation, anim enim nostrud tempor nostrud, veniam. Laboris dolor qui, nulla aliquip ipsum dolor minim velit ullamco. 
                         </p>
                       <p class="text-center"><a href="">Читать полностью</a></p>
                       <div class="post__tags"><a href="" title="Tag name (NN topic)" rel="tag">Tag name</a><a href="" title="Another tag (NN topic)" rel="tag">Another tag</a></div>
@@ -135,6 +729,15 @@
         <p>При использовании материалов с сайта бюро Лира, пожалуйста, поставьте гиперссылку на первоисточник</p>
       </div>
     </footer>
+    <div class="popup">
+      <div class="popup__shade"></div>
+      <div class="popup__content">
+        <div class="close"></div>
+      </div>
+    </div>
   </body>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js "> </script>
+  <!--link(href='css/main.css?' + timestamp rel='stylesheet')-->
+  <!-- Place for scripts-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js "></script>
+  <script src="js/main.js"></script>
 </html>

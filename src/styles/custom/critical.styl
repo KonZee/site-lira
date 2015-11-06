@@ -1,0 +1,60 @@
+///// From common
+// Sticky flex footer
+html
+body
+	display flex
+	flex-direction column
+	min-height 100%
+
+body
+	flex 1 1 auto
+	position relative
+
+.header
+.footer
+	flex 0 0 auto
+.content
+	flex 1 0 auto
+
+
+// Container
+.container
+	display table
+	width 100%
+	max-width 960px
+	margin-left auto
+	margin-right auto
+
+///// From mine
+.main
+	min-height 1px
+	width 100%
+	padding 10px 10px 0
+	@media screen and (min-width: 1000px)
+		width 640px
+		float left
+
+
+///// From sidebar
+.sidebar
+	min-height 1px
+	width 100%
+	padding 13px 10px 0
+	@media screen and (min-width: 1000px)
+		width 320px
+		float right
+		&:before
+		&:after
+			content ""
+			display table
+		&:after
+			clear both
+
+///// From typo
+html
+	font-size 13px
+	font-family Arial, Helvetica, Garuda, sans-serif
+
+body
+	color #333
+

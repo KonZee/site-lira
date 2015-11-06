@@ -1,10 +1,10 @@
 .menu
-	width 100%
 	display block
-	margin 3em 5px 0
+	width 100%
+	margin 0
+	paddign 0
 	&__item
-		display inline-block
-		line-height normal
+		display block
 		a
 			display block
 			padding 10px 15px
@@ -19,3 +19,8 @@
 				background #fff
 				color #999
 				text-shadow none
+	@media screen and (min-width: 700px)
+		margin 3em 5px 0
+		&__item
+			display inline-block
+			line-height normal
