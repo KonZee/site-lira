@@ -578,6 +578,41 @@ hr {
 	    -ms-transform: translate(-50%, -50%);
 	        transform: translate(-50%, -50%);
 }
+.popup__content .close {
+	position: absolute;
+	content: '';
+	width: 40px;
+	height: 40px;
+	border: 2px solid #FFFFFF;
+	background: #000000;
+	background: rgba(0,0,0,0.4);
+	border-radius: 50%;
+	right: -40px;
+	top: -40px;
+	cursor: pointer;
+}
+.popup__content .close:before,
+.popup__content .close:after {
+	display: block;
+	content: '';
+	width: 26px;
+	height: 3px;
+	background: #FFFFFF;
+	position: absolute;
+	border-radius: 1px;
+	left: 5px;
+	top: 16px;
+}
+.popup__content .close:before {
+	-webkit-transform: rotate(45deg);
+	    -ms-transform: rotate(45deg);
+	        transform: rotate(45deg);
+}
+.popup__content .close:after {
+	-webkit-transform: rotate(-45deg);
+	    -ms-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
+}
 @media screen and (min-width: 700px) {
 	.menu {
 		margin: 3em 5px 0;
@@ -622,13 +657,13 @@ hr {
             <h1 class="title">Регламенты бюро «Лира»: Требования к составлению рекламных объявлений</h1>
             <p class="blogpost__author">Иоанн Васильевич Грозный, Царь всея Руси</p>
             <div class="blogpost__gap"></div>
-              <p>Elit irure tempor nisi, tempor pariatur cillum lorem non, culpa. Est ut laboris proident sunt irure dolor. Fugiat labore commodo, magna reprehenderit lorem aliquip. Sed pariatur excepteur minim sunt deserunt fugiat ut. Nisi magna, ea aliquip sunt lorem ut incididunt qui? 
+              <p>Ex, esse, culpa, veniam mollit, mollit laboris id. Proident voluptate nisi nisi, culpa mollit, consequat deserunt. Sit ipsum ea non, aute, est irure, consequat fugiat. Do ut amet nisi et laborum nisi? In qui deserunt sunt dolor amet, et cupidatat esse dolore. 
               </p>
-              <p>Tempor qui veniam nulla irure, in irure. Pariatur officia lorem enim ipsum, in ad, laboris commodo tempor. Cillum lorem fugiat dolor aute veniam, duis sunt, culpa dolor, ullamco sint deserunt. Nostrud esse, pariatur commodo, nostrud, excepteur consectetur minim nulla aute dolore cupidatat. 
+              <p>Occaecat ea quis laborum esse magna minim quis dolore mollit esse, nulla, veniam in? Lorem qui aliquip eu lorem exercitation. 
               </p>
-              <p>Magna eiusmod ad aliquip laborum, ad, duis adipiscing, nisi. Duis ut commodo eu eu. Labore, dolore ut consequat irure aliqua aliqua aute? Voluptate, reprehenderit consectetur, reprehenderit nisi occaecat commodo exercitation. Anim nulla, dolor proident ut irure ullamco minim laborum ex nisi, velit sint. 
+              <p>Dolor ullamco, dolor do minim eu cillum, fugiat ullamco voluptate est, qui. Nulla aliquip, nisi reprehenderit do magna adipiscing laborum, proident labore qui cupidatat, occaecat? Non, fugiat labore, reprehenderit, enim eiusmod nostrud nisi, do. Non occaecat esse tempor amet exercitation? Enim minim reprehenderit adipiscing eu do, exercitation consectetur nisi. Consectetur, qui duis dolore, in aliquip, labore dolore est ut labore sint, esse aliquip. 
               </p>
-              <p>Sed mollit minim aliqua commodo ut ex consectetur. Ea ea qui commodo, voluptate reprehenderit occaecat, qui in adipiscing id, labore velit excepteur. Velit nisi dolor tempor voluptate, sed consequat amet sunt consequat nulla occaecat anim laboris tempor. Laboris ut incididunt, culpa ipsum tempor id, ut id qui nostrud sint et labore. 
+              <p>In, ullamco proident est veniam, ullamco consectetur adipiscing. Laboris quis incididunt, aliqua veniam consectetur dolor sed elit veniam, ad exercitation. Id elit duis nulla pariatur commodo mollit dolore? 
               </p>
           </div>
         </main>
@@ -654,9 +689,9 @@ hr {
           <div class="sidebar__latest">
             <h3 class="title">Последние записи</h3>
             <ul>
-              <li><a href="">Dolor reprehenderit id sed aliqua nostrud qui ut laboris fugiat  (5)</a></li>
-              <li><a href="">Cupidatat nisi laboris adipiscing minim reprehenderit irure officia ut qui  (5)</a></li>
-              <li><a href="">Incididunt aliqua elit cupidatat fugiat aute consequat eiusmod sit do  (5)</a></li>
+              <li><a href="">Esse id consectetur officia id culpa ut ut veniam eiusmod  (5)</a></li>
+              <li><a href="">Duis ea sed laborum aliqua ipsum dolor tempor nisi cupidatat  (5)</a></li>
+              <li><a href="">Quis non adipiscing aute aliquip do reprehenderit sunt consequat incididunt  (5)</a></li>
             </ul>
           </div>
           <h3 class="title">Правовая информация</h3><a href="" class="sidebar__link">Политика конфиденциальности</a>

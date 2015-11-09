@@ -578,6 +578,41 @@ hr {
 	    -ms-transform: translate(-50%, -50%);
 	        transform: translate(-50%, -50%);
 }
+.popup__content .close {
+	position: absolute;
+	content: '';
+	width: 40px;
+	height: 40px;
+	border: 2px solid #FFFFFF;
+	background: #000000;
+	background: rgba(0,0,0,0.4);
+	border-radius: 50%;
+	right: -40px;
+	top: -40px;
+	cursor: pointer;
+}
+.popup__content .close:before,
+.popup__content .close:after {
+	display: block;
+	content: '';
+	width: 26px;
+	height: 3px;
+	background: #FFFFFF;
+	position: absolute;
+	border-radius: 1px;
+	left: 5px;
+	top: 16px;
+}
+.popup__content .close:before {
+	-webkit-transform: rotate(45deg);
+	    -ms-transform: rotate(45deg);
+	        transform: rotate(45deg);
+}
+.popup__content .close:after {
+	-webkit-transform: rotate(-45deg);
+	    -ms-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
+}
 @media screen and (min-width: 700px) {
 	.menu {
 		margin: 3em 5px 0;

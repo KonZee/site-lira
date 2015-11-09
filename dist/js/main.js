@@ -9,7 +9,7 @@ $(document).ready(function(){
 		$('.popup').fadeIn();
 	});
 
-	$('.popup__shade').click(function(){
+	$('.popup__shade, .popup__content .close').click(function(){
 		$('.popup').fadeOut();
 		setTimeout(function(){
 			$('.popup__content').find('img').remove();
